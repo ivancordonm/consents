@@ -13,7 +13,16 @@
 Generated application comes with sample test process that allows you to verify if the application is working as expected. Simply execute following command to try it out
 
 ```sh
-curl -d '{}' -H "Content-Type: application/json" -X POST http://localhost:8080/greetings
+curl -X 'POST' \
+  'http://localhost:8080/myprocess' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "consent": {
+    "id": "1234",
+    "client": true
+  }
+}'
                                                              
 ```
 
