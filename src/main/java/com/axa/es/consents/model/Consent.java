@@ -13,6 +13,6 @@ public class Consent {
 
     private String id;
 
-    boolean isClient;
+    boolean client;
 
 }

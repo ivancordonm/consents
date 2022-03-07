@@ -9,7 +9,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ConsentOrder {
+public class Order {
     private String type;
     private boolean accepted;
 }
