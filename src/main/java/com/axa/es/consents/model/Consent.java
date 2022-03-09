@@ -11,8 +11,8 @@ import lombok.Setter;
 @NoArgsConstructor
 public class Consent {
 
-    private String id;
+    private String idenpn;
 
-    boolean client;
+    boolean isclient;
 
 }
