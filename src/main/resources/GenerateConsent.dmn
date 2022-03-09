@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_DE771CF6-F4FE-49F0-90E7-913803C200E8" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_7498BD13-FB8C-40CA-95E4-4B7642F02B11" name="Test" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_DE771CF6-F4FE-49F0-90E7-913803C200E8">
+<dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_DE771CF6-F4FE-49F0-90E7-913803C200E8" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_7498BD13-FB8C-40CA-95E4-4B7642F02B11" name="generate_consents" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_DE771CF6-F4FE-49F0-90E7-913803C200E8">
   <dmn:extensionElements/>
   <dmn:itemDefinition id="_3610BE01-476D-4D27-9077-FBA441D07F9C" name="tConsent" isCollection="false">
     <dmn:itemComponent id="_A07F7FFA-1160-4C7C-AE7F-9E5344B94B89" name="id" isCollection="false">
@@ -44,7 +44,7 @@
           <dmn:text>false</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_4B1D8A03-5421-4370-BBE6-B5E765E0A588">
-          <dmn:text>"ask"</dmn:text>
+          <dmn:text>"type1"</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -58,7 +58,7 @@
           <dmn:text>true</dmn:text>
         </dmn:outputEntry>
         <dmn:outputEntry id="_D315F17E-5CB9-4B92-87D2-4550F94EF42F">
-          <dmn:text>"asssk"</dmn:text>
+          <dmn:text>"type2"</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -73,7 +73,7 @@
           <kie:ComponentWidths dmnElementRef="_8643BA78-FC9F-490E-B6C0-BA17D6CC38C3">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>100</kie:width>
+            <kie:width>118</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
           </kie:ComponentWidths>
