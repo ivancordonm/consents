@@ -10,9 +10,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Consent {
-
-    private String idenpn;
-
-    boolean isclient;
-
+    private String type;
+    private boolean accepted;
 }

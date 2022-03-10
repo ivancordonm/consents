@@ -9,7 +9,10 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
-    private String type;
-    private boolean accepted;
+public class Request {
+
+    private String idenpn;
+
+    boolean isclient;
+
 }

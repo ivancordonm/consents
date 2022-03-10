@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dmn:definitions xmlns:dmn="http://www.omg.org/spec/DMN/20180521/MODEL/" xmlns="https://kiegroup.org/dmn/_DE771CF6-F4FE-49F0-90E7-913803C200E8" xmlns:feel="http://www.omg.org/spec/DMN/20180521/FEEL/" xmlns:kie="http://www.drools.org/kie/dmn/1.2" xmlns:dmndi="http://www.omg.org/spec/DMN/20180521/DMNDI/" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" id="_7498BD13-FB8C-40CA-95E4-4B7642F02B11" name="generate_consents" expressionLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" typeLanguage="http://www.omg.org/spec/DMN/20180521/FEEL/" namespace="https://kiegroup.org/dmn/_DE771CF6-F4FE-49F0-90E7-913803C200E8">
   <dmn:extensionElements/>
-  <dmn:itemDefinition id="_3610BE01-476D-4D27-9077-FBA441D07F9C" name="tConsent" isCollection="false">
+  <dmn:itemDefinition id="_3610BE01-476D-4D27-9077-FBA441D07F9C" name="tRequest" isCollection="false">
     <dmn:itemComponent id="_A07F7FFA-1160-4C7C-AE7F-9E5344B94B89" name="idenpn" isCollection="false">
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
@@ -9,7 +9,7 @@
       <dmn:typeRef>boolean</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:itemDefinition id="_69BDB31A-1155-42FD-9E80-DD7E8C964CBA" name="tOrder" isCollection="false">
+  <dmn:itemDefinition id="_69BDB31A-1155-42FD-9E80-DD7E8C964CBA" name="tConsent" isCollection="false">
     <dmn:itemComponent id="_D79BA22B-B961-4FB1-9AD0-72844ADF0C70" name="accepted" isCollection="false">
       <dmn:typeRef>boolean</dmn:typeRef>
     </dmn:itemComponent>
@@ -17,20 +17,20 @@
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:inputData id="_009B1145-3B9E-4CCA-AA96-2580EBD253EB" name="Consent">
+  <dmn:inputData id="_009B1145-3B9E-4CCA-AA96-2580EBD253EB" name="Request">
     <dmn:extensionElements/>
-    <dmn:variable id="_51780D83-7D8D-45B1-B36E-795014E84994" name="Consent" typeRef="tConsent"/>
+    <dmn:variable id="_51780D83-7D8D-45B1-B36E-795014E84994" name="Request" typeRef="tRequest"/>
   </dmn:inputData>
-  <dmn:decision id="_6FCDD209-2B29-48AF-B116-E9D84582F6DB" name="Order">
+  <dmn:decision id="_6FCDD209-2B29-48AF-B116-E9D84582F6DB" name="Consent">
     <dmn:extensionElements/>
-    <dmn:variable id="_BFDD3924-348D-400C-9075-D96F04048A07" name="Order" typeRef="tOrder"/>
+    <dmn:variable id="_BFDD3924-348D-400C-9075-D96F04048A07" name="Consent" typeRef="tConsent"/>
     <dmn:informationRequirement id="_D5096114-0277-455C-8E30-6A5FC7AC092A">
       <dmn:requiredInput href="#_009B1145-3B9E-4CCA-AA96-2580EBD253EB"/>
     </dmn:informationRequirement>
     <dmn:decisionTable id="_8643BA78-FC9F-490E-B6C0-BA17D6CC38C3" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
       <dmn:input id="_21A9D233-A5FF-4839-843D-A4C7A1494B4F">
         <dmn:inputExpression id="_FE649BF8-E1CA-440D-94F6-6DB5E6DC0169" typeRef="boolean">
-          <dmn:text>Consent.isclient</dmn:text>
+          <dmn:text>Request.isclient</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
       <dmn:output id="_6231AB5D-6D9B-4CCC-A269-D7848947001E" name="accepted" typeRef="boolean"/>
