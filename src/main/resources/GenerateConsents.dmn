@@ -9,44 +9,56 @@
       <dmn:typeRef>boolean</dmn:typeRef>
     </dmn:itemComponent>
   </dmn:itemDefinition>
-  <dmn:itemDefinition id="_5FC3A2C6-BD79-4F76-9C04-453706525469" name="tConsents" isCollection="true">
-    <dmn:typeRef>string</dmn:typeRef>
+  <dmn:itemDefinition id="_5FC3A2C6-BD79-4F76-9C04-453706525469" name="tConsentList" isCollection="true">
+    <dmn:itemComponent id="_C65BD98D-925C-499A-B0FD-E082B0D2072C" name="consentIds" isCollection="true">
+      <dmn:typeRef>string</dmn:typeRef>
+    </dmn:itemComponent>
+    <dmn:itemComponent id="_6531C953-832B-43E3-8148-13BE94230220" name="id" isCollection="false">
+      <dmn:typeRef>Any</dmn:typeRef>
+    </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:inputData id="_935021B3-04CD-4A95-84BE-F7DBD7554A3B" name="Request">
     <dmn:extensionElements/>
     <dmn:variable id="_CDBB6A19-E0B8-471D-9520-29B5A3F7EB9D" name="Request" typeRef="tRequest"/>
   </dmn:inputData>
-  <dmn:decision id="_BB6F45E9-D4CB-4E53-812F-547A1F7E42AC" name="Consents">
+  <dmn:decision id="_BB6F45E9-D4CB-4E53-812F-547A1F7E42AC" name="ConsentList">
     <dmn:extensionElements/>
-    <dmn:variable id="_7B084573-C14A-4957-B5E9-9A4630961DBE" name="Consents" typeRef="tConsents"/>
+    <dmn:variable id="_7B084573-C14A-4957-B5E9-9A4630961DBE" name="ConsentList" typeRef="tConsentList"/>
     <dmn:informationRequirement id="_4D2396BA-6C1D-4C4C-8503-5CB1BD56952D">
       <dmn:requiredInput href="#_935021B3-04CD-4A95-84BE-F7DBD7554A3B"/>
     </dmn:informationRequirement>
-    <dmn:decisionTable id="_719F6798-9D05-41C9-BC28-ED5909BD311A" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
-      <dmn:input id="_9B0200FF-4A12-4329-B199-FA1AD3F86C07">
-        <dmn:inputExpression id="_AFC9E7E8-57FA-4E09-932F-887BC1B94AE7" typeRef="boolean">
+    <dmn:decisionTable id="_50740211-582E-47C6-BDF4-888153F412DA" hitPolicy="UNIQUE" preferredOrientation="Rule-as-Row">
+      <dmn:input id="_49A712DA-9CCE-4EBA-8FCF-E0D1278940B1">
+        <dmn:inputExpression id="_EC9D61FE-83FD-481F-8186-7237B731AD33" typeRef="boolean">
           <dmn:text>Request.isclient</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:output id="_1DF1216D-DF75-4A22-97AC-F30A3645A4FA"/>
+      <dmn:output id="_A7B4676D-ADCF-4B28-AF64-A0A3DC49D93B" name="consentIds" typeRef="string"/>
+      <dmn:output id="_5B02919D-E065-4B92-8C8D-087BAC708D95" name="id" typeRef="Any"/>
       <dmn:annotation name="annotation-1"/>
-      <dmn:rule id="_9D89AE34-D0E3-4CE3-A8A7-0D41515E4A6D">
-        <dmn:inputEntry id="_44F0F202-D1EB-4869-92B5-8F1FB7943E07">
+      <dmn:rule id="_9C8E290A-BC6E-445C-B469-30AC3D8E7F3E">
+        <dmn:inputEntry id="_A2125D94-04FB-4080-AACE-D749FD3C33C2">
           <dmn:text>true</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry id="_BA0711E4-FA9B-4094-9233-3E8A9554FB2D">
-          <dmn:text>["type1", "type2"]</dmn:text>
+        <dmn:outputEntry id="_2466F764-F263-4EA0-9FCD-25BCFDE6F83E">
+          <dmn:text>["a","b"]</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_CB5D255C-1E15-4FF8-A319-4008FB817359">
+          <dmn:text>1</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
         </dmn:annotationEntry>
       </dmn:rule>
-      <dmn:rule id="_AEC3D061-E11A-443B-AC64-7DA87BE12B61">
-        <dmn:inputEntry id="_5C19C63F-9858-460D-9760-5D86FD9F8259">
+      <dmn:rule id="_BD7053CD-231F-4247-BE0F-E3167D914A24">
+        <dmn:inputEntry id="_67854854-E6DF-4748-8E53-757967E27546">
           <dmn:text>false</dmn:text>
         </dmn:inputEntry>
-        <dmn:outputEntry id="_4D68C117-738D-4D8D-8E70-36809345920A">
-          <dmn:text>["type2", "type3"]</dmn:text>
+        <dmn:outputEntry id="_DBA991B7-6F45-4A83-B8B8-44980C4FF7D3">
+          <dmn:text>["c","d"]</dmn:text>
+        </dmn:outputEntry>
+        <dmn:outputEntry id="_9D1C8084-D8C0-4B73-B796-F39150CAA5A2">
+          <dmn:text>1</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -58,11 +70,12 @@
     <dmndi:DMNDiagram id="_41EDD6D7-BD65-4113-84E8-B92DEFB59564" name="DRG">
       <di:extension>
         <kie:ComponentsWidthsExtension>
-          <kie:ComponentWidths dmnElementRef="_719F6798-9D05-41C9-BC28-ED5909BD311A">
+          <kie:ComponentWidths dmnElementRef="_50740211-582E-47C6-BDF4-888153F412DA">
             <kie:width>50</kie:width>
             <kie:width>100</kie:width>
-            <kie:width>284</kie:width>
-            <kie:width>429</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
+            <kie:width>100</kie:width>
           </kie:ComponentWidths>
         </kie:ComponentsWidthsExtension>
       </di:extension>
