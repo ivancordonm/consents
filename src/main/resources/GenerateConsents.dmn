@@ -13,9 +13,6 @@
     <dmn:itemComponent id="_C65BD98D-925C-499A-B0FD-E082B0D2072C" name="consentIds" isCollection="true">
       <dmn:typeRef>string</dmn:typeRef>
     </dmn:itemComponent>
-    <dmn:itemComponent id="_6531C953-832B-43E3-8148-13BE94230220" name="id" isCollection="false">
-      <dmn:typeRef>Any</dmn:typeRef>
-    </dmn:itemComponent>
   </dmn:itemDefinition>
   <dmn:inputData id="_935021B3-04CD-4A95-84BE-F7DBD7554A3B" name="Request">
     <dmn:extensionElements/>
@@ -33,8 +30,7 @@
           <dmn:text>Request.isclient</dmn:text>
         </dmn:inputExpression>
       </dmn:input>
-      <dmn:output id="_A7B4676D-ADCF-4B28-AF64-A0A3DC49D93B" name="consentIds" typeRef="string"/>
-      <dmn:output id="_5B02919D-E065-4B92-8C8D-087BAC708D95" name="id" typeRef="Any"/>
+      <dmn:output id="_A7B4676D-ADCF-4B28-AF64-A0A3DC49D93B"/>
       <dmn:annotation name="annotation-1"/>
       <dmn:rule id="_9C8E290A-BC6E-445C-B469-30AC3D8E7F3E">
         <dmn:inputEntry id="_A2125D94-04FB-4080-AACE-D749FD3C33C2">
@@ -42,9 +38,6 @@
         </dmn:inputEntry>
         <dmn:outputEntry id="_2466F764-F263-4EA0-9FCD-25BCFDE6F83E">
           <dmn:text>["a","b"]</dmn:text>
-        </dmn:outputEntry>
-        <dmn:outputEntry id="_CB5D255C-1E15-4FF8-A319-4008FB817359">
-          <dmn:text>1</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -56,9 +49,6 @@
         </dmn:inputEntry>
         <dmn:outputEntry id="_DBA991B7-6F45-4A83-B8B8-44980C4FF7D3">
           <dmn:text>["c","d"]</dmn:text>
-        </dmn:outputEntry>
-        <dmn:outputEntry id="_9D1C8084-D8C0-4B73-B796-F39150CAA5A2">
-          <dmn:text>1</dmn:text>
         </dmn:outputEntry>
         <dmn:annotationEntry>
           <dmn:text/>
@@ -72,7 +62,6 @@
         <kie:ComponentsWidthsExtension>
           <kie:ComponentWidths dmnElementRef="_50740211-582E-47C6-BDF4-888153F412DA">
             <kie:width>50</kie:width>
-            <kie:width>100</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
             <kie:width>100</kie:width>
