@@ -13,12 +13,12 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.axa.es.consents;
+package com.example.consents;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages={"com.axa.es.consents.**", "org.kie.kogito.**", "http**"})
+@SpringBootApplication(scanBasePackages={"com.example.consents.**", "org.kie.kogito.**", "http**"})
 public class KogitoApplication {
 
     public static void main(String[] args) {

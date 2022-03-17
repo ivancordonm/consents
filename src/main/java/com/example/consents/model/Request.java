@@ -1,4 +1,4 @@
-package com.axa.es.consents.model;
+package com.example.consents.model;
 
 import java.util.List;
 

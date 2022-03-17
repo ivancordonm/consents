@@ -9,7 +9,7 @@
     <relativePath /> <!-- lookup parent from repository -->
   </parent>
 
-  <groupId>com.axa.es.consents</groupId>
+  <groupId>com.example.consents</groupId>
   <artifactId>consents</artifactId>
   <version>1.0-SNAPSHOT</version>
 
