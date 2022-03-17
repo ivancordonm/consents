@@ -1,10 +1,10 @@
-package com.axa.es.consents;
+package com.example.consents;
 
-import com.axa.es.consents.model.Consents;
+import com.example.consents.model.Consents;
 
 import org.springframework.stereotype.Service;
 
-import com.axa.es.consents.model.Consent;
+import com.example.consents.model.Consent;
 
 @Service
 public class VerifyConsents {
